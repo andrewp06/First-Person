@@ -2,18 +2,12 @@ package com.example;
 
 public class ImagePane {
     @SuppressWarnings("unused")
-    private Vector topLeft;
+    private Vector left;
     @SuppressWarnings("unused")
-    private Vector topRight;
-    @SuppressWarnings("unused")
-    private Vector bottomRight;
-    @SuppressWarnings("unused")
-    private Vector bottomLeft;
+    private Vector right;
 
-    public ImagePane(Vector topLeft, Vector topRight, Vector bottomRight, Vector bottomLeft){
-        this.topLeft = topLeft;
-        this.topRight = topRight;
-        this.bottomLeft = bottomLeft;
-        this.bottomRight  = bottomRight;
+    public ImagePane(Vector left, Vector right){
+        this.left = left;
+        this.right = right;
     }
 }
