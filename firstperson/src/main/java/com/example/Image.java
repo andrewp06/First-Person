@@ -18,5 +18,12 @@ public class Image {
         int rgb = (Math.round(color.getR()*255) << 16) | (Math.round(color.getG()*255) << 8) | Math.round(color.getB()*255);
         image.setRGB(x, y, rgb);
     } 
+    public int getScreenHeight() {
+        return screenHeight;
+    }
+    public int getScreenWidth() {
+        return screenWidth;
+    }
+    
 
 }
