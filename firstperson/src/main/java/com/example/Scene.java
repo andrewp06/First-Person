@@ -22,7 +22,4 @@ public class Scene {
         initialCamera(DEFUALT_FOV);
     }
 
-    
-    
-
 }
