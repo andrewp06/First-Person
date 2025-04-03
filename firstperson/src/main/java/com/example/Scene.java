@@ -5,12 +5,7 @@ public class Scene {
     private Vector camera;
     private ImagePane imagePane;
     private Image image;
-    private static final int[][] walls={{3,1,0,0,0,1,2},
-                                        {0,0,0,0,0,0,0},
-                                        {0,0,0,0,0,0,0},
-                                        {0,0,0,0,0,0,0},
-                                        {0,0,0,0,0,0,0},
-                                        {3,4,0,0,0,4,2}};
+    private final Wall[] walls;
 
 
     private void initialCamera(int fov){
@@ -25,7 +20,8 @@ public class Scene {
         imagePane = new ImagePane(leftVector, righVector);
     }
 
-    public Scene(int w, int h, int scale,int fov){
+    public Scene(int w, int h, int scale,int fov){ 
+        walls = new Wall[1];
         image = new Image(w, h, scale);
         initialCamera(fov);
     }
