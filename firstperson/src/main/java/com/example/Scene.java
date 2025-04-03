@@ -5,6 +5,12 @@ public class Scene {
     private Vector camera;
     private ImagePane imagePane;
     private Image image;
+    private static final int[][] walls={{3,1,0,0,0,1,2},
+                                        {0,0,0,0,0,0,0},
+                                        {0,0,0,0,0,0,0},
+                                        {0,0,0,0,0,0,0},
+                                        {0,0,0,0,0,0,0},
+                                        {3,4,0,0,0,4,2}};
 
 
     private void initialCamera(int fov){
@@ -18,8 +24,13 @@ public class Scene {
         righVector.rotate(fov);
         imagePane = new ImagePane(leftVector, righVector);
     }
-    private void initialCamera(){
-        initialCamera(DEFUALT_FOV);
+
+    public Scene(int w, int h, int scale,int fov){
+        image = new Image(w, h, scale);
+        initialCamera(fov);
+    }
+    public Scene(int w, int h, int scale){
+        this(w, h, scale, DEFUALT_FOV);
     }
 
 }

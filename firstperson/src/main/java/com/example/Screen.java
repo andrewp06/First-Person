@@ -7,8 +7,9 @@ public class Screen extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'start'");
+        Scene scene = new Scene(500,800,2);
+        
+
     }
 
     public static void main(String[] args) {
