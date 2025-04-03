@@ -1,11 +1,15 @@
 package com.example;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Scene {
     private static final int DEFUALT_FOV = 60;
     private Vector camera;
     private ImagePane imagePane;
     private Image image;
-    private final Wall[] walls;
+    private final List<Wall> walls;
 
 
     private void initialCamera(int fov){
@@ -21,7 +25,7 @@ public class Scene {
     }
 
     public Scene(int w, int h, int scale,int fov){ 
-        walls = new Wall[1];
+        walls = new ArrayList<>();
         image = new Image(w, h, scale);
         initialCamera(fov);
     }
