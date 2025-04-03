@@ -1,7 +1,7 @@
 package com.example;
 
 public class RayIntersection {
-    public static Color findFirstWall(Ray ray, Wall[] walls){
+    public static ColorDistancePair findFirstWall(Ray ray, Wall[] walls){
         float closestT = Float.POSITIVE_INFINITY;
         Wall closestWall = null;
 
@@ -28,7 +28,7 @@ public class RayIntersection {
                 closestWall = wall;
             }
         }
-
-        return closestWall.getColor();
+        
+        return new ColorDistancePair(closestWall.getColor(), closestT);
     }
 }
