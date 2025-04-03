@@ -26,4 +26,9 @@ public class Vector {
     public static Vector vectorSubtraction(Vector vectorA, Vector vectorB){
         return vectorAddition(vectorA, scalarMult(vectorB, -1));
     }
+    
+    public void rotate(float degree){
+        x = ((float)Math.cos(degree)*x) - ((float)Math.sin(degree)*y);
+        y = ((float)Math.sin(degree)*x) + ((float)Math.cos(degree)*y);
+    }
 }
