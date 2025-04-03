@@ -31,4 +31,11 @@ public class Vector {
         x = ((float)Math.cos(degree)*x) - ((float)Math.sin(degree)*y);
         y = ((float)Math.sin(degree)*x) + ((float)Math.cos(degree)*y);
     }
+
+    public float getX() {
+        return x;
+    }
+    public float getY() {
+        return y;
+    }
 }
