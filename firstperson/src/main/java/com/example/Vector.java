@@ -12,7 +12,7 @@ public class Vector {
 
     @Override
     public String toString() {
-        return String.format("<%d, %d>", x,y);
+        return String.format("<%f, %f>", x,y);
     }
 
     public static Vector vectorAddition(Vector vectorA, Vector vectorB){
@@ -28,8 +28,11 @@ public class Vector {
     }
     
     public void rotate(float degree){
-        x = ((float)Math.cos(degree)*x) - ((float)Math.sin(degree)*y);
-        y = ((float)Math.sin(degree)*x) + ((float)Math.cos(degree)*y);
+        float radians = (float)Math.toRadians(-degree);
+        float newX = ((float)Math.cos(radians)*x) - ((float)Math.sin(radians)*y);
+        float newY = ((float)Math.sin(radians)*x) + ((float)Math.cos(radians)*y);
+        x = newX;
+        y = newY;
     }
 
     public float getX() {
@@ -37,5 +40,13 @@ public class Vector {
     }
     public float getY() {
         return y;
+    }
+
+    public float magnitude(){
+        return (float)Math.sqrt(Math.pow(y, 2)+Math.pow(x, 2));
+    }
+    public Vector normalize(){
+        return scalarMult(this, 1/this.magnitude());
+        
     }
 }

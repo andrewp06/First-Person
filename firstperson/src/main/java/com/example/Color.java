@@ -1,8 +1,5 @@
 package com.example;
 
-import lombok.Value;
-
-@Value
 public class Color {
     float r;
     float g;
@@ -12,5 +9,15 @@ public class Color {
         this.r = r;
         this.g = g;
         this.b = b;
+    }
+
+    public float getB() {
+        return b;
+    }
+    public float getG() {
+        return g;
+    }
+    public float getR() {
+        return r;
     }
 }
